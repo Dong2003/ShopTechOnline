@@ -27,6 +27,11 @@ namespace ShopTechOnline.Models.EF
 
         public string Alias { get; set; }
 
+        //[StringLength(150)]
+        //public string TypeCode { get; set; }
+
+        //public string Link { get; set; }
+
         public string Description { get; set; }
 
         public string Position { get; set; }

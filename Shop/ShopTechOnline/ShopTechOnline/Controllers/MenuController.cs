@@ -28,6 +28,12 @@ namespace ShopTechOnline.Controllers
             return PartialView("_MenuProductCategory",items);
         }
 
+        public ActionResult MenuLeft()
+        {
+            var items = db.productCategories.ToList();
+            return PartialView("_MenuLeft", items);
+        }
+
         public ActionResult MenuArrivals()
         {
             var items = db.productCategories.ToList();

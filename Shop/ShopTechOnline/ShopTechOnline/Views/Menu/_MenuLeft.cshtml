@@ -1,0 +1,11 @@
+﻿@model IEnumerable<ShopTechOnline.Models.EF.ProductCategory>
+
+@if (Model != null && Model.Any())
+{
+    <ul class="sidebar_categories">
+        @foreach (var item in Model)
+        {
+            <li><a href="/danh-muc-san-pham/@item.Alias-@(item.ID)">@item.Title</a></li>
+        }
+    </ul>
+}

@@ -143,6 +143,34 @@ namespace ShopTechOnline.Areas.Admin.Controllers
         }
 
         [HttpPost]
+        public ActionResult IsHome(int id)
+        {
+            var item = db.products.Find(id);
+            if (item != null)
+            {
+                item.IsHome = !item.IsHome;
+                db.Entry(item).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+                return Json(new { success = true, isHome = item.IsHome });
+            }
+            return Json(new { success = false });
+        }
+
+        [HttpPost]
+        public ActionResult IsSale(int id)
+        {
+            var item = db.products.Find(id);
+            if (item != null)
+            {
+                item.IsSale = !item.IsSale;
+                db.Entry(item).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+                return Json(new { success = true, isSale = item.IsSale });
+            }
+            return Json(new { success = false });
+        }
+
+        [HttpPost]
         public ActionResult DeleteAll(string ids)
         {
             if (!string.IsNullOrEmpty(ids))
