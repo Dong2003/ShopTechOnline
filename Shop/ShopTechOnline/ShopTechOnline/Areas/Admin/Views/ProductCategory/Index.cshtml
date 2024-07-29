@@ -73,6 +73,7 @@
                         <th><input type="checkbox" id="SelectAll" /></th>
                         <th>STT</th>
                         <th>Tiêu đề</th>
+                        <th>Hình ảnh</th>
                         <th>Ngày tạo</th>
                         <th>Chức năng</th>
                         <th></th>
@@ -89,6 +90,7 @@
                                 <td><input type="checkbox" class="cbkItem" value="@item.ID" /></td>
                                 <td>@i</td>
                                 <td>@item.Title</td>
+                                <td><img src="@item.Icon" width="100" /></td>
                                 <td>@item.CreatedDate.ToString("dd/MM/yyyy")</td>
                                 <td>
                                     <a href="/admin/productcategory/edit/@item.ID" class="btn btn-sm btn-primary">Sửa</a>

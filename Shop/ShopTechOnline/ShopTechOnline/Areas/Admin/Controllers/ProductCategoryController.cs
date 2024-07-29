@@ -40,5 +40,27 @@ namespace ShopTechOnline.Areas.Admin.Controllers
             return View();
         }
 
+        public ActionResult Edit(int id)
+        {
+            var item = db.productCategories.Find(id);
+            return View(item);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(ProductCategory model)
+        {
+            if (ModelState.IsValid)
+            {
+                model.ModifiledDate = DateTime.Now;
+                model.Alias = ShopTechOnline.Models.Common.FIlter.FilterChar(model.Title);
+                db.productCategories.Attach(model);
+                db.Entry(model).State = System.Data.Entity.EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(model);
+        }
+
     }
 }
