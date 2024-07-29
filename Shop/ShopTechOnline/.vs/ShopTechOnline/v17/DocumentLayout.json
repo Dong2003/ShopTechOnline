@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Git\\Shop\\ShopTechOnline\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2A8DB7A3-6DF6-4E38-BE04-19A82B70ED96}|ShopTechOnline\\ShopTechOnline.csproj|D:\\Git\\Shop\\ShopTechOnline\\shoptechonline\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2A8DB7A3-6DF6-4E38-BE04-19A82B70ED96}|ShopTechOnline\\ShopTechOnline.csproj|solutionrelative:shoptechonline\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2A8DB7A3-6DF6-4E38-BE04-19A82B70ED96}|ShopTechOnline\\ShopTechOnline.csproj|d:\\git\\shop\\shoptechonline\\shoptechonline\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2A8DB7A3-6DF6-4E38-BE04-19A82B70ED96}|ShopTechOnline\\ShopTechOnline.csproj|solutionrelative:shoptechonline\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Git\\Shop\\ShopTechOnline\\ShopTechOnline\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "ShopTechOnline\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\Git\\Shop\\ShopTechOnline\\ShopTechOnline\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "ShopTechOnline\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAIUBAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-28T09:35:49.285Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Git\\Shop\\ShopTechOnline\\ShopTechOnline\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "ShopTechOnline\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Git\\Shop\\ShopTechOnline\\ShopTechOnline\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "ShopTechOnline\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAKoAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-28T09:19:45.163Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
