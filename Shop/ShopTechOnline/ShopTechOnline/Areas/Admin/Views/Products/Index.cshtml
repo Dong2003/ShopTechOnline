@@ -79,7 +79,6 @@
                         <th>Danh mục</th>
                         <th>Số lượng</th>
                         <th>Giá</th>
-                        <th>Giá khuyến mãi</th>
                         <th>Ngày tạo</th>
                         <th>Home</th>
                         <th>Sale</th>
@@ -119,9 +118,7 @@
 
                                 <td>@item.Quantity</td>
 
-                                <td>@item.Price</td>
-
-                                <td>@item.PrcieSale</td>
+                                <td>@ShopTechOnline.Models.Commons.FormatNumber(item.Price, 0)</td>
 
                                 <td>@item.CreatedDate.ToString("dd/MM/yyyy")</td>
 

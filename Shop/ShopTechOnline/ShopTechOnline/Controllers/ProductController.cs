@@ -14,11 +14,17 @@ namespace ShopTechOnline.Controllers
         public ActionResult Index(int ? id)
         {
             var items = db.products.ToList();
-            if (id != null) 
-            {
-                items = items.Where( x => x.ProductCategoryID == id ).ToList();
-            }
+            //if (id != null) 
+            //{
+            //    items = items.Where( x => x.ProductCategoryID == id ).ToList();
+            //}
             return View(items);
+        }
+
+        public ActionResult Detail(string alias,int id)
+        {
+            var items = db.products.Find(id);
+            return View(items); 
         }
 
         public ActionResult ProductCategory(string alias, int? id)
@@ -28,6 +34,11 @@ namespace ShopTechOnline.Controllers
             {
                 items = items.Where(x => x.ProductCategoryID == id).ToList();
             }
+            var cate = db.productCategories.Find(id);
+            if(cate != null){
+                ViewBag.CateName = cate.Title;
+            }
+            ViewBag.CateID = id;
             return View(items);
         }
 

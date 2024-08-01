@@ -1,0 +1,33 @@
+﻿@model IEnumerable<ShopTechOnline.Models.ShoppingCartItem>
+@using ShopTechOnline.Models
+
+
+@if (Model != null && Model.Any())
+{
+    <h3>GIỎ HÀNG<span style="float:right;">@Model.Count()</span></h3>
+    var i = 0;
+    var tongtien = decimal.Zero;
+    <div style="border:1px solid #ff0000">
+        <table class="table">
+            @foreach (var item in Model)
+            {
+                tongtien += item.TotalPrice;
+                <tr>
+                    <td>@item.ProductName</td>
+                    <td>@item.Quantity</td>
+                    <td>@Commons.FormatNumber(item.Price, 0)</td>
+                </tr>
+            }
+            <tr>
+                <td>Tổng tiền</td>
+                <td></td>
+                <td>@Commons.FormatNumber(tongtien, 0)</td>
+            </tr>
+        </table>
+    </div>
+}
+else
+{
+      
+}
+

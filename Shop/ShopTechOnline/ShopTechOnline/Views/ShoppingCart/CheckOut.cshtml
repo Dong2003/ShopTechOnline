@@ -1,0 +1,94 @@
+﻿
+@{
+    ViewBag.Title = "Thanh toán";
+}
+
+
+@{
+    ViewBag.Title = "Giỏ hàng";
+}
+
+<link rel="stylesheet" type="text/css" href="~/Content/assets/styles/categories_styles.css">
+<link rel="stylesheet" type="text/css" href="~/Content/assets/styles/categories_responsive.css">
+
+<div class="container product_section_container">
+    <div class="row">
+        <div class="col product_section clearfix">
+
+            <!-- Breadcrumbs -->
+
+            <div class="breadcrumbs d-flex flex-row align-items-center">
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li class="active"><a href="/"><i class="fa fa-angle-right" aria-hidden="true"></i>Giỏ hàng</a></li>
+                </ul>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h1>Thanh toán</h1>
+                    <p>Hãy kiểm tra lại thông tin đơn hàng trước khi thanh toán!</p>
+                </div>
+            </div>
+
+            <hr />
+            @if (ViewBag.CheckCart != null)
+            {
+                <div class="row">
+                    <div class="col-md-8">
+                        <h3>Thông tin khách hàng</h3>
+                        <div class="form-group">
+                            <label>Họ tên khách hàng</label>
+                            <input type="text" name="CustomerName" class="form-control" autocomplete="off" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Số điện thoại</label>
+                            <input type="text" name="Phone" class="form-control" autocomplete="off" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Địa chỉ</label>
+                            <input type="text" name="Address" class="form-control" autocomplete="off" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="text" name="Email" class="form-control" autocomplete="off" />
+                        </div>
+
+                        <div class="form-group">
+                            <label>Hình thức thanh toán</label>
+                            <select class="form-control" name="Payment">
+                                <option value="1" selected>COD</option>
+                                <option value="2">Chuyển khoản</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="button" class="btn btn-block btn-success">Đặt hàng</button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        @Html.Action("Partial_Item_ThanhToan", "ShoppingCart")
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div>
+                    Bạn chưa có sản phẩm nào. Vui lòng quay lại trang <a href="/san-pham">sản phẩm</a> để mua hàng.
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script src="~/Content/assets/js/categories_custom.js"></script>
+    <script src="~/Content/assets/js/categories_price.js"></script>
+}
+
+
+

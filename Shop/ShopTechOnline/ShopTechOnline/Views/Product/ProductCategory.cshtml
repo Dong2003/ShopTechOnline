@@ -16,7 +16,7 @@
             <div class="breadcrumbs d-flex flex-row align-items-center">
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li class="active"><a href="/"><i class="fa fa-angle-right" aria-hidden="true"></i>Men's</a></li>
+                    <li class="active"><a href="/"><i class="fa fa-angle-right" aria-hidden="true"></i>@ViewBag.CateName</a></li>
                 </ul>
             </div>
 
@@ -25,18 +25,20 @@
             <div class="sidebar">
                 <div class="sidebar_section">
                     <div class="sidebar_title">
-                        <h5>Product Category</h5>
+                        <h5>Danh mục</h5>
                     </div>
-                    @Html.Action("MenuLeft", "Menu")
+                    @Html.Action("MenuLeft", "Menu", "{ id = ViewBag.CateID}")
                 </div>
-                
+
                 <!-- Price Range Filtering -->
                 <div class="sidebar_section">
                     <div class="sidebar_title">
-                        <h5>Filter by Price</h5>
+                        <h5>Chọn theo giá</h5>
                     </div>
                     <p>
                         <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+                        <input type="hidden" id="FromAmount" />
+                        <input type="hidden" id="ToAmount" />
                     </p>
                     <div id="slider-range"></div>
                     <div class="filter_button"><span>filter</span></div>
@@ -44,39 +46,39 @@
 
                 <!-- Sizes -->
                 <!--<div class="sidebar_section">
-        <div class="sidebar_title">
-            <h5>Sizes</h5>
-        </div>
-        <ul class="checkboxes">
-            <li><i class="fa fa-square-o" aria-hidden="true"></i><span>S</span></li>
-            <li class="active"><i class="fa fa-square" aria-hidden="true"></i><span>M</span></li>
-            <li><i class="fa fa-square-o" aria-hidden="true"></i><span>L</span></li>
-            <li><i class="fa fa-square-o" aria-hidden="true"></i><span>XL</span></li>
-            <li><i class="fa fa-square-o" aria-hidden="true"></i><span>XXL</span></li>
-        </ul>
-    </div>-->
+                    <div class="sidebar_title">
+                        <h5>Sizes</h5>
+                    </div>
+                    <ul class="checkboxes">
+                        <li><i class="fa fa-square-o" aria-hidden="true"></i><span>S</span></li>
+                        <li class="active"><i class="fa fa-square" aria-hidden="true"></i><span>M</span></li>
+                        <li><i class="fa fa-square-o" aria-hidden="true"></i><span>L</span></li>
+                        <li><i class="fa fa-square-o" aria-hidden="true"></i><span>XL</span></li>
+                        <li><i class="fa fa-square-o" aria-hidden="true"></i><span>XXL</span></li>
+                    </ul>
+                </div>-->
                 <!-- Color -->
                 <!--<div class="sidebar_section">
-        <div class="sidebar_title">
-            <h5>Color</h5>
-        </div>
-        <ul class="checkboxes">
-            <li><i class="fa fa-square-o" aria-hidden="true"></i><span>Black</span></li>
-            <li class="active"><i class="fa fa-square" aria-hidden="true"></i><span>Pink</span></li>
-            <li><i class="fa fa-square-o" aria-hidden="true"></i><span>White</span></li>
-            <li><i class="fa fa-square-o" aria-hidden="true"></i><span>Blue</span></li>
-            <li><i class="fa fa-square-o" aria-hidden="true"></i><span>Orange</span></li>
-            <li><i class="fa fa-square-o" aria-hidden="true"></i><span>White</span></li>
-            <li><i class="fa fa-square-o" aria-hidden="true"></i><span>Blue</span></li>
-            <li><i class="fa fa-square-o" aria-hidden="true"></i><span>Orange</span></li>
-            <li><i class="fa fa-square-o" aria-hidden="true"></i><span>White</span></li>
-            <li><i class="fa fa-square-o" aria-hidden="true"></i><span>Blue</span></li>
-            <li><i class="fa fa-square-o" aria-hidden="true"></i><span>Orange</span></li>
-        </ul>
-        <div class="show_more">
-            <span><span>+</span>Show More</span>
-        </div>
-    </div>-->
+                    <div class="sidebar_title">
+                        <h5>Color</h5>
+                    </div>
+                    <ul class="checkboxes">
+                        <li><i class="fa fa-square-o" aria-hidden="true"></i><span>Black</span></li>
+                        <li class="active"><i class="fa fa-square" aria-hidden="true"></i><span>Pink</span></li>
+                        <li><i class="fa fa-square-o" aria-hidden="true"></i><span>White</span></li>
+                        <li><i class="fa fa-square-o" aria-hidden="true"></i><span>Blue</span></li>
+                        <li><i class="fa fa-square-o" aria-hidden="true"></i><span>Orange</span></li>
+                        <li><i class="fa fa-square-o" aria-hidden="true"></i><span>White</span></li>
+                        <li><i class="fa fa-square-o" aria-hidden="true"></i><span>Blue</span></li>
+                        <li><i class="fa fa-square-o" aria-hidden="true"></i><span>Orange</span></li>
+                        <li><i class="fa fa-square-o" aria-hidden="true"></i><span>White</span></li>
+                        <li><i class="fa fa-square-o" aria-hidden="true"></i><span>Blue</span></li>
+                        <li><i class="fa fa-square-o" aria-hidden="true"></i><span>Orange</span></li>
+                    </ul>
+                    <div class="show_more">
+                        <span><span>+</span>Show More</span>
+                    </div>
+                </div>-->
 
             </div>
 
@@ -151,22 +153,27 @@
                                                     <img src="@strImge" alt="@item.Title">
                                                 </div>
                                                 <div class="favorite favorite_left"></div>
-                                                <div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>-$20</span></div>
-                                                <div class="product_info">
-                                                    <h6 class="product_name"><a href="@item.Alias">@item.Title</a></h6>
-                                                    @if (item.PrcieSale > 0)
-                                                    {
-                                                        <div class="product_price">@ShopTechOnline.Models.Commons.FormatNumber(item.PrcieSale, 0)<span>@ShopTechOnline.Models.Commons.FormatNumber(item.Price, 0)</span></div>
-                                                    }
-                                                    else
-                                                    {
-                                                        <div class="product_price">@ShopTechOnline.Models.Commons.FormatNumber(item.Price, 0)<span></span></div>
-                                                    }
+                                                @if (item.PrcieSale > 0)
+                                                {
+                                                    <div class="product_bubble product_bubble_right product_bubble_red d-flex flex-column align-items-center"><span>sale</span></div>
+                                                }
+                                            <div class="product_info">
+                                                <h6 class="product_name"><a href="/chi-tiet/@item.Alias-p@(item.ID)">@item.Title</a></h6>
+                                                @if (item.PrcieSale > 0)
+                                                {
+                                                    <div class="product_price">@ShopTechOnline.Models.Commons.FormatNumber(item.PrcieSale, 0)<span>@ShopTechOnline.Models.Commons.FormatNumber(item.Price, 0)</span></div>
+                                                    @*<input type="hidden" value="@item.PrcieSale" />*@
+                                                }
+                                                else
+                                                {
+                                                    <div class="product_price">@ShopTechOnline.Models.Commons.FormatNumber(item.Price, 0)<span></span></div>
+                                                    <div style="display:none;" class="in_product_price">@item.Price</div>
+                                                }
 
-                                                </div>
+                                            </div>
                                             </div>
 
-                                            <div class="red_button add_to_cart_button"><a href="#">add to cart</a></div>
+                                            <div class="red_button add_to_cart_button"><a href="#" class="btnAddToCart" data-id="@item.ID">add to cart</a></div>
 
                                         </div>
                                     }
@@ -202,7 +209,6 @@
                                         <div class="page_total"><span>of</span> 3</div>
                                         <div id="next_page_1" class="page_next"><a href="#"><i class="fa fa-long-arrow-right" aria-hidden="true"></i></a></div>
                                     </div>*@
-
                             </div>
 
                         </div>
@@ -215,4 +221,5 @@
 
 @section scripts{
     <script src="~/Content/assets/js/categories_custom.js"></script>
+    <script src="~/Content/assets/js/categories_price.js"></script>
 }
