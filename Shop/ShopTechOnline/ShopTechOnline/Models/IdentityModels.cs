@@ -29,6 +29,8 @@ namespace ShopTechOnline.Models
         {
         }
 
+        public DbSet<Statistical> statisticals { get; set; }
+
         public DbSet<Category> categories { get; set; }
 
         public DbSet<Adv> advs { get; set; }

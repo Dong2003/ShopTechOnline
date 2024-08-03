@@ -50,6 +50,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\asp_net_mvc\ckfinder\bin\Release\CKFinder.dll</HintPath>
     </Reference>
+    <Reference Include="Dapper, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Dapper.2.1.35\lib\net461\Dapper.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="PagedList, Version=1.17.0.0, Culture=neutral, PublicKeyToken=abbb863e9397c5e1, processorArchitecture=MSIL">
       <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
@@ -238,11 +241,24 @@
     <Compile Include="Migrations\202407251719322_update2607.designer.cs">
       <DependentUpon>202407251719322_update2607.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202408011246481_UpdatePayment.cs" />
+    <Compile Include="Migrations\202408011246481_UpdatePayment.Designer.cs">
+      <DependentUpon>202408011246481_UpdatePayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202408020814472_CreatedTBThongke.cs" />
+    <Compile Include="Migrations\202408020814472_CreatedTBThongke.Designer.cs">
+      <DependentUpon>202408020814472_CreatedTBThongke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202408021318263_UpdateSta.cs" />
+    <Compile Include="Migrations\202408021318263_UpdateSta.Designer.cs">
+      <DependentUpon>202408021318263_UpdateSta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Commons.cs" />
     <Compile Include="Models\CommonAbstract.cs" />
     <Compile Include="Models\Common\FIlter.cs" />
+    <Compile Include="Models\Common\ThongKeTruyCap.cs" />
     <Compile Include="Models\CustomerViewModel.cs" />
     <Compile Include="Models\EF\Adv.cs" />
     <Compile Include="Models\EF\Category.cs" />
@@ -254,11 +270,14 @@
     <Compile Include="Models\EF\Product.cs" />
     <Compile Include="Models\EF\ProductCategory.cs" />
     <Compile Include="Models\EF\ProductImage.cs" />
+    <Compile Include="Models\EF\Statistical.cs" />
     <Compile Include="Models\EF\Subscribe.cs" />
     <Compile Include="Models\EF\SystemSetting.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\OrderViewModel.cs" />
     <Compile Include="Models\ShoppingCart.cs" />
+    <Compile Include="Models\Statistical.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -3346,6 +3365,9 @@
     <Content Include="Views\ShoppingCart\Partial_Item_Cart.cshtml" />
     <Content Include="Views\ShoppingCart\CheckOut.cshtml" />
     <Content Include="Views\ShoppingCart\Partial_Item_ThanhToan.cshtml" />
+    <Content Include="Views\ShoppingCart\Partial_CheckOut.cshtml" />
+    <Content Include="Views\ShoppingCart\CheckOutSuccess.cshtml" />
+    <Content Include="Views\Home\Refresh.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -3414,6 +3436,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202407251719322_update2607.resx">
       <DependentUpon>202407251719322_update2607.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202408011246481_UpdatePayment.resx">
+      <DependentUpon>202408011246481_UpdatePayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202408020814472_CreatedTBThongke.resx">
+      <DependentUpon>202408020814472_CreatedTBThongke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202408021318263_UpdateSta.resx">
+      <DependentUpon>202408021318263_UpdateSta.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

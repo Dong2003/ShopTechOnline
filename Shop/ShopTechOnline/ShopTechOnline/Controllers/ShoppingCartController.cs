@@ -1,4 +1,5 @@
 ﻿using ShopTechOnline.Models;
+using ShopTechOnline.Models.EF;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,26 +10,37 @@ namespace ShopTechOnline.Controllers
 {
     public class ShoppingCartController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
         // GET: ShoppingCart
         public ActionResult Index()
         {
-            return View();
-        }
-
-        public ActionResult CheckOut()
-        {
             ShoppingCart cart = (ShoppingCart)Session["Cart"];
-            if (cart != null)
+            if (cart != null && cart.items.Any())
             {
                 ViewBag.CheckCart = cart;
             }
             return View();
         }
 
+        public ActionResult CheckOut()
+        {
+            ShoppingCart cart = (ShoppingCart)Session["Cart"];
+            if (cart != null && cart.items.Any())
+            {
+                ViewBag.CheckCart = cart;
+            }
+            return View();
+        }
+
+        public ActionResult CheckOutSuccess()
+        {
+            return View();
+        }
+
         public ActionResult Partial_Item_ThanhToan()
         {
             ShoppingCart cart = (ShoppingCart)Session["Cart"];
-            if (cart != null)
+            if (cart != null && cart.items.Any())
             {
                 return PartialView(cart.items);
             }
@@ -38,7 +50,7 @@ namespace ShopTechOnline.Controllers
         public ActionResult Partial_Item_Cart()
         {
             ShoppingCart cart = (ShoppingCart)Session["Cart"];
-            if (cart != null)
+            if (cart != null && cart.items.Any())
             {
                 return PartialView(cart.items);
             }
@@ -55,6 +67,49 @@ namespace ShopTechOnline.Controllers
             return Json(new { Count = 0 }, JsonRequestBehavior.AllowGet);
         }
 
+        public ActionResult Partial_CheckOut()
+        {
+            return PartialView();
+        }
+
+        // Xử lý thanh toán đơn hàng
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CheckOut(OrderViewModel req)
+        {
+            var code = new { Success = false, Code = -1 };
+            if(ModelState.IsValid)
+            {
+                ShoppingCart cart = (ShoppingCart)Session["Cart"];
+                if(cart != null)
+                {
+                    Order order = new Order();
+                    order.CustomerName = req.CustomerName;
+                    order.Phone = req.Phone;
+                    order.Address = req.Address;
+                    cart.items.ForEach(x => order.orderDetails.Add(new OrderDetail
+                    {
+                        ProductID = x.ProductID,
+                        Quantity = x.Quantity,
+                        Price = x.Price
+                    }));
+                    order.TotalAmount = cart.items.Sum( x => (x.Price * x.Quantity) );
+                    order.TypePayment = req.TypePayment;
+                    order.CreatedDate = DateTime.Now;
+                    order.ModifiledDate = DateTime.Now;
+                    order.Created = req.Phone;
+                    Random rd = new Random();
+                    order.Code = "DH" + rd.Next(0,9) + rd.Next(0,9) + rd.Next(0, 9) + rd.Next(0, 9);
+                    db.orders.Add(order);
+                    db.SaveChanges();
+                    cart.ClearCart();
+                    return RedirectToAction("CheckOutSuccess");
+                }
+            }
+            return Json(code);
+        }
+
+        // Thêm sản phẩm vô giỏ hàng và update số lượng
         [HttpPost]
         public ActionResult AddToCart(int id , int quantity)
         {

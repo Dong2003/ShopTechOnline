@@ -1,0 +1,28 @@
+﻿@model ShopTechOnline.Models.StatisticalModel
+
+@if (Model != null)
+{
+    <div class="thongke" style="margin-left: 930px">
+        <table class="table">
+            <tr>
+                <td>Truy cập hôm nay: </td>
+                <td>@Model.HomNay</td>
+            </tr>
+
+            <tr>
+                <td>Truy cập tuần này: </td>
+                <td>@Model.TuanNay</td>
+            </tr>
+
+            <tr>
+                <td>Truy cập tháng này: </td>
+                <td>@Model.ThangNay</td>
+            </tr>
+
+            <tr>
+                <td>Số người Online: </td>
+                <td>@ViewBag.visitors_onlione</td>
+            </tr>
+        </table>
+    </div>
+}

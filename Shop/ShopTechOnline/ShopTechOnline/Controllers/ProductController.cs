@@ -20,10 +20,17 @@ namespace ShopTechOnline.Controllers
             //}
             return View(items);
         }
-
+        // Chi tiết sản phẩm và số lơụt xem sản phẩm
         public ActionResult Detail(string alias,int id)
         {
             var items = db.products.Find(id);
+            if(items != null)
+            {
+                db.products.Attach(items);
+                items.ViewCount = items.ViewCount + 1;
+                db.Entry(items).Property( x => x.ViewCount).IsModified = true;
+                db.SaveChanges();
+            }
             return View(items); 
         }
 

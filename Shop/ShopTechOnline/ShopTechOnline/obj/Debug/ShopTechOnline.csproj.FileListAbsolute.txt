@@ -373,3 +373,8 @@ D:\Git\ShopTechOnline\Shop\ShopTechOnline\ShopTechOnline\obj\Debug\ShopTechOnlin
 D:\Git\ShopTechOnline\Shop\ShopTechOnline\ShopTechOnline\obj\Debug\ShopTech.EDD17413.Up2Date
 D:\Git\ShopTechOnline\Shop\ShopTechOnline\ShopTechOnline\obj\Debug\ShopTechOnline.dll
 D:\Git\ShopTechOnline\Shop\ShopTechOnline\ShopTechOnline\obj\Debug\ShopTechOnline.pdb
+D:\Git\ShopTechOnline\Shop\ShopTechOnline\ShopTechOnline\obj\Debug\ShopTechOnline.Migrations.UpdatePayment.resources
+D:\Git\ShopTechOnline\Shop\ShopTechOnline\ShopTechOnline\obj\Debug\ShopTechOnline.Migrations.CreatedTBThongke.resources
+D:\Git\ShopTechOnline\Shop\ShopTechOnline\ShopTechOnline\obj\Debug\ShopTechOnline.Migrations.UpdateSta.resources
+D:\Git\ShopTechOnline\Shop\ShopTechOnline\ShopTechOnline\bin\Dapper.dll
+D:\Git\ShopTechOnline\Shop\ShopTechOnline\ShopTechOnline\bin\Dapper.xml
