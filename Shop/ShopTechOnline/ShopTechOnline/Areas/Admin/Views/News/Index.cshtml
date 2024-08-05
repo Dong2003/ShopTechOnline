@@ -90,13 +90,19 @@
                             var strCheck = item.IsActive ? "<i class='fa fa-check text-success'></i>" : "<i class='fas fa-times text-danger'></i>";
                             <tr id="trow_@item.ID">
                                 <td><input type="checkbox" class="cbkItem" value="@item.ID" /></td>
-                                <td>@i</td>                       
+
+                                <td>@i</td>                 
+                                
                                 <td><img src="@item.Image" width="100" /></td>
+
                                 <td>@item.Title</td>
+
                                 <td>@item.CreatedDate.ToString("dd/MM/yyyy")</td>
+
                                 <td class="text-center">
                                     <a href='#' data-id="@item.ID" class="btnActive">@Html.Raw(strCheck)</a>
                                 </td>
+
                                 <td>
                                     <a href="/admin/news/edit/@item.ID" class="btn btn-sm btn-primary">Sửa</a>
                                     <a href="#" data-id="@item.ID" class="btn btn-sm btn-danger btnDelete">Xóa</a>

@@ -2,6 +2,7 @@
 using ShopTechOnline.Models.EF;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -72,7 +73,7 @@ namespace ShopTechOnline.Controllers
             return PartialView();
         }
 
-        // Xử lý thanh toán đơn hàng
+        // Xử lý thanh toán đơn hàng va sendemial dat hang thanh con
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult CheckOut(OrderViewModel req)
@@ -87,6 +88,7 @@ namespace ShopTechOnline.Controllers
                     order.CustomerName = req.CustomerName;
                     order.Phone = req.Phone;
                     order.Address = req.Address;
+                    order.Email = req.Email;
                     cart.items.ForEach(x => order.orderDetails.Add(new OrderDetail
                     {
                         ProductID = x.ProductID,
@@ -102,6 +104,46 @@ namespace ShopTechOnline.Controllers
                     order.Code = "DH" + rd.Next(0,9) + rd.Next(0,9) + rd.Next(0, 9) + rd.Next(0, 9);
                     db.orders.Add(order);
                     db.SaveChanges();
+
+                    //Send Mail cho khach hang khi thanh cong
+                    var strproduct = "";
+                    var thanhtien = decimal.Zero;
+                    var tongtien = decimal.Zero;
+
+                    foreach (var sp in cart.items)
+                    {
+                        strproduct += "<tr>";
+                        strproduct += "<td>" + sp.ProductName + "</td>";
+                        strproduct += "<td>" + sp.Quantity + "</td>";
+                        strproduct += "<td>" + ShopTechOnline.Models.Commons.FormatNumber(sp.TotalPrice, 0) + "</td>";
+                        strproduct += "</tr>";
+                        thanhtien += sp.Price * sp.Quantity;
+                    }
+                    tongtien = thanhtien;
+                    string contentCustomer = System.IO.File.ReadAllText(Server.MapPath("~/Content/templatesmail/send2.html"));
+                    contentCustomer = contentCustomer.Replace("{{MaDon}}", order.Code);
+                    contentCustomer = contentCustomer.Replace("{{SanPham}}", strproduct);
+                    contentCustomer = contentCustomer.Replace("{{NgayDat}}", DateTime.Now.ToString("dd/MM/yyyy"));
+                    contentCustomer = contentCustomer.Replace("{{TenKhachHang}}", order.CustomerName);
+                    contentCustomer = contentCustomer.Replace("{{Phone}}", order.Phone);
+                    contentCustomer = contentCustomer.Replace("{{Email}}", req.Email);
+                    contentCustomer = contentCustomer.Replace("{{DiaChiNhanHang}}", order.Address);
+                    contentCustomer = contentCustomer.Replace("{{ThanhTien}}", ShopTechOnline.Models.Commons.FormatNumber(thanhtien, 0));
+                    contentCustomer = contentCustomer.Replace("{{TongTien}}", ShopTechOnline.Models.Commons.FormatNumber(tongtien, 0));
+                    ShopTechOnline.Models.Commons.SendMail("ShopTechOnline", "Đơn hàng #" + order.Code, contentCustomer.ToString(), req.Email);
+
+                    string contentAdmin = System.IO.File.ReadAllText(Server.MapPath("~/Content/templatesmail/send1.html"));
+                    contentAdmin = contentAdmin.Replace("{{MaDon}}", order.Code);
+                    contentAdmin = contentAdmin.Replace("{{SanPham}}", strproduct);
+                    contentAdmin = contentAdmin.Replace("{{NgayDat}}", DateTime.Now.ToString("dd/MM/yyyy"));
+                    contentAdmin = contentAdmin.Replace("{{TenKhachHang}}", order.CustomerName);
+                    contentAdmin = contentAdmin.Replace("{{Phone}}", order.Phone);
+                    contentAdmin = contentAdmin.Replace("{{Email}}", req.Email);
+                    contentAdmin = contentAdmin.Replace("{{DiaChiNhanHang}}", order.Address);
+                    contentAdmin = contentAdmin.Replace("{{ThanhTien}}", ShopTechOnline.Models.Commons.FormatNumber(thanhtien, 0));
+                    contentAdmin = contentAdmin.Replace("{{TongTien}}", ShopTechOnline.Models.Commons.FormatNumber(tongtien, 0));
+                    ShopTechOnline.Models.Commons.SendMail("ShopTechOnline", "Đơn hàng mới #" + order.Code, contentAdmin.ToString(), ConfigurationManager.AppSettings["EmailAdmin"]);
+
                     cart.ClearCart();
                     return RedirectToAction("CheckOutSuccess");
                 }
