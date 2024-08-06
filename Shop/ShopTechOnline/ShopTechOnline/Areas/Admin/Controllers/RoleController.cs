@@ -9,6 +9,7 @@ using System.Web.Mvc;
 
 namespace ShopTechOnline.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class RoleController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();

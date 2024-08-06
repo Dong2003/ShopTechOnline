@@ -9,9 +9,9 @@ using ShopTechOnline.Models.EF;
 
 namespace ShopTechOnline.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin, Employee")]
     public class ProductsController : Controller
     {
-
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Admin/Products

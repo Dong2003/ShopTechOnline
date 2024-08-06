@@ -9,6 +9,7 @@ using ShopTechOnline.Models.EF;
 
 namespace ShopTechOnline.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class OrderController : Controller
     {
         ApplicationDbContext db = new ApplicationDbContext();

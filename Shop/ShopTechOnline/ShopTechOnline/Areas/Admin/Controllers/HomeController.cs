@@ -6,6 +6,8 @@ using System.Web.Mvc;
 
 namespace ShopTechOnline.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Admin,Employee")]
+
     public class HomeController : Controller
     {
         // GET: Admin/Home

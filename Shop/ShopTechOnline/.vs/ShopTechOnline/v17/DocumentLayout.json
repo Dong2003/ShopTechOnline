@@ -3,44 +3,12 @@
   "WorkspaceRootPath": "D:\\Git\\ShopTechOnline\\Shop\\ShopTechOnline\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2A8DB7A3-6DF6-4E38-BE04-19A82B70ED96}|ShopTechOnline\\ShopTechOnline.csproj|d:\\git\\shoptechonline\\shop\\shoptechonline\\shoptechonline\\app_start\\identityconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A8DB7A3-6DF6-4E38-BE04-19A82B70ED96}|ShopTechOnline\\ShopTechOnline.csproj|solutionrelative:shoptechonline\\app_start\\identityconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2A8DB7A3-6DF6-4E38-BE04-19A82B70ED96}|ShopTechOnline\\ShopTechOnline.csproj|d:\\git\\shoptechonline\\shop\\shoptechonline\\shoptechonline\\areas\\admin\\views\\news\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2A8DB7A3-6DF6-4E38-BE04-19A82B70ED96}|ShopTechOnline\\ShopTechOnline.csproj|solutionrelative:shoptechonline\\areas\\admin\\views\\news\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2A8DB7A3-6DF6-4E38-BE04-19A82B70ED96}|ShopTechOnline\\ShopTechOnline.csproj|d:\\git\\shoptechonline\\shop\\shoptechonline\\shoptechonline\\areas\\admin\\views\\account\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2A8DB7A3-6DF6-4E38-BE04-19A82B70ED96}|ShopTechOnline\\ShopTechOnline.csproj|solutionrelative:shoptechonline\\areas\\admin\\views\\account\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A8DB7A3-6DF6-4E38-BE04-19A82B70ED96}|ShopTechOnline\\ShopTechOnline.csproj|d:\\git\\shoptechonline\\shop\\shoptechonline\\shoptechonline\\areas\\admin\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A8DB7A3-6DF6-4E38-BE04-19A82B70ED96}|ShopTechOnline\\ShopTechOnline.csproj|solutionrelative:shoptechonline\\areas\\admin\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A8DB7A3-6DF6-4E38-BE04-19A82B70ED96}|ShopTechOnline\\ShopTechOnline.csproj|d:\\git\\shoptechonline\\shop\\shoptechonline\\shoptechonline\\models\\accountviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A8DB7A3-6DF6-4E38-BE04-19A82B70ED96}|ShopTechOnline\\ShopTechOnline.csproj|solutionrelative:shoptechonline\\models\\accountviewmodels.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A8DB7A3-6DF6-4E38-BE04-19A82B70ED96}|ShopTechOnline\\ShopTechOnline.csproj|d:\\git\\shoptechonline\\shop\\shoptechonline\\shoptechonline\\areas\\admin\\views\\role\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2A8DB7A3-6DF6-4E38-BE04-19A82B70ED96}|ShopTechOnline\\ShopTechOnline.csproj|solutionrelative:shoptechonline\\areas\\admin\\views\\role\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A8DB7A3-6DF6-4E38-BE04-19A82B70ED96}|ShopTechOnline\\ShopTechOnline.csproj|d:\\git\\shoptechonline\\shop\\shoptechonline\\shoptechonline\\areas\\admin\\views\\account\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2A8DB7A3-6DF6-4E38-BE04-19A82B70ED96}|ShopTechOnline\\ShopTechOnline.csproj|solutionrelative:shoptechonline\\areas\\admin\\views\\account\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A8DB7A3-6DF6-4E38-BE04-19A82B70ED96}|ShopTechOnline\\ShopTechOnline.csproj|d:\\git\\shoptechonline\\shop\\shoptechonline\\shoptechonline\\areas\\admin\\views\\role\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2A8DB7A3-6DF6-4E38-BE04-19A82B70ED96}|ShopTechOnline\\ShopTechOnline.csproj|solutionrelative:shoptechonline\\areas\\admin\\views\\role\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A8DB7A3-6DF6-4E38-BE04-19A82B70ED96}|ShopTechOnline\\ShopTechOnline.csproj|d:\\git\\shoptechonline\\shop\\shoptechonline\\shoptechonline\\areas\\admin\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2A8DB7A3-6DF6-4E38-BE04-19A82B70ED96}|ShopTechOnline\\ShopTechOnline.csproj|solutionrelative:shoptechonline\\areas\\admin\\controllers\\rolecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A8DB7A3-6DF6-4E38-BE04-19A82B70ED96}|ShopTechOnline\\ShopTechOnline.csproj|d:\\git\\shoptechonline\\shop\\shoptechonline\\shoptechonline\\areas\\admin\\views\\shared\\_partialsidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2A8DB7A3-6DF6-4E38-BE04-19A82B70ED96}|ShopTechOnline\\ShopTechOnline.csproj|solutionrelative:shoptechonline\\areas\\admin\\views\\shared\\_partialsidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2A8DB7A3-6DF6-4E38-BE04-19A82B70ED96}|ShopTechOnline\\ShopTechOnline.csproj|D:\\Git\\ShopTechOnline\\Shop\\ShopTechOnline\\shoptechonline\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2A8DB7A3-6DF6-4E38-BE04-19A82B70ED96}|ShopTechOnline\\ShopTechOnline.csproj|solutionrelative:shoptechonline\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2A8DB7A3-6DF6-4E38-BE04-19A82B70ED96}|ShopTechOnline\\ShopTechOnline.csproj|d:\\git\\shoptechonline\\shop\\shoptechonline\\shoptechonline\\areas\\admin\\controllers\\newscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2A8DB7A3-6DF6-4E38-BE04-19A82B70ED96}|ShopTechOnline\\ShopTechOnline.csproj|solutionrelative:shoptechonline\\areas\\admin\\controllers\\newscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -55,130 +23,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "IdentityConfig.cs",
-              "DocumentMoniker": "D:\\Git\\ShopTechOnline\\Shop\\ShopTechOnline\\ShopTechOnline\\App_Start\\IdentityConfig.cs",
-              "RelativeDocumentMoniker": "ShopTechOnline\\App_Start\\IdentityConfig.cs",
-              "ToolTip": "D:\\Git\\ShopTechOnline\\Shop\\ShopTechOnline\\ShopTechOnline\\App_Start\\IdentityConfig.cs",
-              "RelativeToolTip": "ShopTechOnline\\App_Start\\IdentityConfig.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAAADYAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-05T14:07:59.416Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AccountViewModels.cs",
-              "DocumentMoniker": "D:\\Git\\ShopTechOnline\\Shop\\ShopTechOnline\\ShopTechOnline\\Models\\AccountViewModels.cs",
-              "RelativeDocumentMoniker": "ShopTechOnline\\Models\\AccountViewModels.cs",
-              "ToolTip": "D:\\Git\\ShopTechOnline\\Shop\\ShopTechOnline\\ShopTechOnline\\Models\\AccountViewModels.cs",
-              "RelativeToolTip": "ShopTechOnline\\Models\\AccountViewModels.cs",
-              "ViewState": "AQIAADkAAAAAAAAAAAAUwEsAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-05T13:57:14.349Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Git\\ShopTechOnline\\Shop\\ShopTechOnline\\ShopTechOnline\\Areas\\Admin\\Views\\News\\Index.cshtml",
+              "RelativeDocumentMoniker": "ShopTechOnline\\Areas\\Admin\\Views\\News\\Index.cshtml",
+              "ToolTip": "D:\\Git\\ShopTechOnline\\Shop\\ShopTechOnline\\ShopTechOnline\\Areas\\Admin\\Views\\News\\Index.cshtml",
+              "RelativeToolTip": "ShopTechOnline\\Areas\\Admin\\Views\\News\\Index.cshtml",
+              "ViewState": "AQIAACQAAAAAAAAAAAAAADwAAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-06T14:18:24.292Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\Git\\ShopTechOnline\\Shop\\ShopTechOnline\\ShopTechOnline\\Areas\\Admin\\Views\\Account\\Create.cshtml",
-              "RelativeDocumentMoniker": "ShopTechOnline\\Areas\\Admin\\Views\\Account\\Create.cshtml",
-              "ToolTip": "D:\\Git\\ShopTechOnline\\Shop\\ShopTechOnline\\ShopTechOnline\\Areas\\Admin\\Views\\Account\\Create.cshtml",
-              "RelativeToolTip": "ShopTechOnline\\Areas\\Admin\\Views\\Account\\Create.cshtml",
-              "ViewState": "AQIAADAAAAAAAAAAAAAMwEUAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-05T13:48:02.796Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Git\\ShopTechOnline\\Shop\\ShopTechOnline\\ShopTechOnline\\Areas\\Admin\\Views\\Account\\Index.cshtml",
-              "RelativeDocumentMoniker": "ShopTechOnline\\Areas\\Admin\\Views\\Account\\Index.cshtml",
-              "ToolTip": "D:\\Git\\ShopTechOnline\\Shop\\ShopTechOnline\\ShopTechOnline\\Areas\\Admin\\Views\\Account\\Index.cshtml",
-              "RelativeToolTip": "ShopTechOnline\\Areas\\Admin\\Views\\Account\\Index.cshtml",
-              "ViewState": "AQIAACcAAAAAAAAAAAAAADkAAABJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-05T13:33:24.518Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "D:\\Git\\ShopTechOnline\\Shop\\ShopTechOnline\\ShopTechOnline\\Areas\\Admin\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "ShopTechOnline\\Areas\\Admin\\Controllers\\AccountController.cs",
-              "ToolTip": "D:\\Git\\ShopTechOnline\\Shop\\ShopTechOnline\\ShopTechOnline\\Areas\\Admin\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "ShopTechOnline\\Areas\\Admin\\Controllers\\AccountController.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAAAD8AAAAYAAAA",
+              "Title": "NewsController.cs",
+              "DocumentMoniker": "D:\\Git\\ShopTechOnline\\Shop\\ShopTechOnline\\ShopTechOnline\\Areas\\Admin\\Controllers\\NewsController.cs",
+              "RelativeDocumentMoniker": "ShopTechOnline\\Areas\\Admin\\Controllers\\NewsController.cs",
+              "ToolTip": "D:\\Git\\ShopTechOnline\\Shop\\ShopTechOnline\\ShopTechOnline\\Areas\\Admin\\Controllers\\NewsController.cs",
+              "RelativeToolTip": "ShopTechOnline\\Areas\\Admin\\Controllers\\NewsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-05T13:12:54.28Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "D:\\Git\\ShopTechOnline\\Shop\\ShopTechOnline\\ShopTechOnline\\Areas\\Admin\\Views\\Role\\Create.cshtml",
-              "RelativeDocumentMoniker": "ShopTechOnline\\Areas\\Admin\\Views\\Role\\Create.cshtml",
-              "ToolTip": "D:\\Git\\ShopTechOnline\\Shop\\ShopTechOnline\\ShopTechOnline\\Areas\\Admin\\Views\\Role\\Create.cshtml",
-              "RelativeToolTip": "ShopTechOnline\\Areas\\Admin\\Views\\Role\\Create.cshtml",
-              "ViewState": "AQIAABUAAAAAAAAAAAAQwDcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-05T12:43:43.039Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\Git\\ShopTechOnline\\Shop\\ShopTechOnline\\ShopTechOnline\\Areas\\Admin\\Views\\Role\\Index.cshtml",
-              "RelativeDocumentMoniker": "ShopTechOnline\\Areas\\Admin\\Views\\Role\\Index.cshtml",
-              "ToolTip": "D:\\Git\\ShopTechOnline\\Shop\\ShopTechOnline\\ShopTechOnline\\Areas\\Admin\\Views\\Role\\Index.cshtml",
-              "RelativeToolTip": "ShopTechOnline\\Areas\\Admin\\Views\\Role\\Index.cshtml",
-              "ViewState": "AQIAACQAAAAAAAAAAAAQwDAAAAAzAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-05T12:36:14.595Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "RoleController.cs",
-              "DocumentMoniker": "D:\\Git\\ShopTechOnline\\Shop\\ShopTechOnline\\ShopTechOnline\\Areas\\Admin\\Controllers\\RoleController.cs",
-              "RelativeDocumentMoniker": "ShopTechOnline\\Areas\\Admin\\Controllers\\RoleController.cs",
-              "ToolTip": "D:\\Git\\ShopTechOnline\\Shop\\ShopTechOnline\\ShopTechOnline\\Areas\\Admin\\Controllers\\RoleController.cs",
-              "RelativeToolTip": "ShopTechOnline\\Areas\\Admin\\Controllers\\RoleController.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAYwDEAAAAiAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-05T12:33:38.755Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\Git\\ShopTechOnline\\Shop\\ShopTechOnline\\ShopTechOnline\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "ShopTechOnline\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\Git\\ShopTechOnline\\Shop\\ShopTechOnline\\ShopTechOnline\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "ShopTechOnline\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAMMAAAAAAAAAAAAAANkAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-07-30T08:45:26.9Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "_PartialSideBar.cshtml",
-              "DocumentMoniker": "D:\\Git\\ShopTechOnline\\Shop\\ShopTechOnline\\ShopTechOnline\\Areas\\Admin\\Views\\Shared\\_PartialSideBar.cshtml",
-              "RelativeDocumentMoniker": "ShopTechOnline\\Areas\\Admin\\Views\\Shared\\_PartialSideBar.cshtml",
-              "ToolTip": "D:\\Git\\ShopTechOnline\\Shop\\ShopTechOnline\\ShopTechOnline\\Areas\\Admin\\Views\\Shared\\_PartialSideBar.cshtml",
-              "RelativeToolTip": "ShopTechOnline\\Areas\\Admin\\Views\\Shared\\_PartialSideBar.cshtml",
-              "ViewState": "AQIAAFcAAAAAAAAAAAAAABsAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-05T12:38:50.995Z",
+              "WhenOpened": "2024-08-06T14:18:20.742Z",
               "EditorCaption": ""
             }
           ]
