@@ -26,5 +26,7 @@ namespace ShopTechOnline.Models.EF
         public string Type { get; set; }
         [StringLength(150)]
         public string Link { get; set; }
+
+        public bool IsActive { get; set; }
     }
 }

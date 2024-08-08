@@ -185,6 +185,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AccountController.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdvController.cs" />
     <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\NewsController.cs" />
@@ -263,6 +264,10 @@
     <Compile Include="Migrations\202408050309080_updateEmail1.cs" />
     <Compile Include="Migrations\202408050309080_updateEmail1.Designer.cs">
       <DependentUpon>202408050309080_updateEmail1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202408081359454_updateadv.cs" />
+    <Compile Include="Migrations\202408081359454_updateadv.Designer.cs">
+      <DependentUpon>202408081359454_updateadv.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -3464,6 +3469,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="Areas\Admin\Views\Adv\" />
     <Folder Include="Content\ckfinder\userfiles\" />
     <Folder Include="Uploads\files\" />
     <Folder Include="Uploads\flash\" />
@@ -3543,6 +3549,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202408050309080_updateEmail1.resx">
       <DependentUpon>202408050309080_updateEmail1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202408081359454_updateadv.resx">
+      <DependentUpon>202408081359454_updateadv.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

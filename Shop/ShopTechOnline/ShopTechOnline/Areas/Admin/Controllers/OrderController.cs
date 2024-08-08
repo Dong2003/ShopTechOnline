@@ -14,13 +14,17 @@ namespace ShopTechOnline.Areas.Admin.Controllers
     {
         ApplicationDbContext db = new ApplicationDbContext();
         // GET: Admin/Order
-        public ActionResult Index(int ? page)
+        public ActionResult Index(string searchtext, int ? page)
         {
             IEnumerable<Order> items = db.orders.OrderByDescending(x => x.CreatedDate).ToList();
             var pageSize = 10;
             if (page == null)
             {
                 page = 1;
+            }
+            if (!string.IsNullOrEmpty(searchtext))
+            {
+                items = items.Where( x => x.Code.Equals(searchtext) || x.CustomerName.Contains(searchtext));
             }
             var pageIndex = page.HasValue ? Convert.ToInt32(page) : 1;
             items = items.ToPagedList(pageIndex, pageSize);

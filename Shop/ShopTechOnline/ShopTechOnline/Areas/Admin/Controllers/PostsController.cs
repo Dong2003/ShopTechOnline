@@ -15,16 +15,23 @@ namespace ShopTechOnline.Areas.Admin.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Admin/Posts
-        public ActionResult Index(int ? page)
+        public ActionResult Index(string searchtext, int ? page)
         {
             var pageSize = 8;
             if (page == null)
             {
                 page = 1;
             }
+            IEnumerable<Post> item = db.posts.OrderByDescending(x => x.ID);
+            if (!string.IsNullOrEmpty(searchtext))
+            {
+                item = item.Where(x => x.Alias.Equals(searchtext) || x.Title.Contains(searchtext));
+            }
             var pageIndex = page.HasValue ? Convert.ToInt32(page) : 1;
-            var items = db.posts.OrderByDescending(x => x.ID).ToPagedList(pageIndex, pageSize);
-            return View(items);
+            item = item.ToPagedList(pageIndex, pageSize);
+            ViewBag.PageSize = pageSize;
+            ViewBag.Page = page;
+            return View(item);
         }
 
         public ActionResult Add()
@@ -40,7 +47,7 @@ namespace ShopTechOnline.Areas.Admin.Controllers
             if (ModelState.IsValid)
             {
                 model.CreatedDate = DateTime.Now;
-                model.CategoryID = 2;
+                model.CategoryID = 6;
                 model.ModifiledDate = DateTime.Now;
                 model.Alias = ShopTechOnline.Models.Common.FIlter.FilterChar(model.Title);
                 db.posts.Add(model);

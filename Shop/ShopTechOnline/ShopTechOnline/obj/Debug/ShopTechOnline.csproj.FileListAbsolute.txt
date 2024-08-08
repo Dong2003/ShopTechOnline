@@ -380,3 +380,4 @@ D:\Git\ShopTechOnline\Shop\ShopTechOnline\ShopTechOnline\bin\Dapper.dll
 D:\Git\ShopTechOnline\Shop\ShopTechOnline\ShopTechOnline\bin\Dapper.xml
 D:\Git\ShopTechOnline\Shop\ShopTechOnline\ShopTechOnline\obj\Debug\ShopTechOnline.Migrations.updateEmail.resources
 D:\Git\ShopTechOnline\Shop\ShopTechOnline\ShopTechOnline\obj\Debug\ShopTechOnline.Migrations.updateEmail1.resources
+D:\Git\ShopTechOnline\Shop\ShopTechOnline\ShopTechOnline\obj\Debug\ShopTechOnline.Migrations.updateadv.resources

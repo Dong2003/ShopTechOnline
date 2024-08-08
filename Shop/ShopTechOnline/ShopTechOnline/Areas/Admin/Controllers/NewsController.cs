@@ -46,7 +46,7 @@ namespace ShopTechOnline.Areas.Admin.Controllers
             if (ModelState.IsValid)
             {
                 model.CreatedDate = DateTime.Now;
-                model.CategoryID = 2;
+                model.CategoryID = 6;
                 model.ModifiledDate = DateTime.Now;
                 model.Alias = ShopTechOnline.Models.Common.FIlter.FilterChar(model.Title);
                 db.news.Add(model);
