@@ -17,6 +17,7 @@ namespace ShopTechOnline.Controllers
     {
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         public AccountController()
         {
@@ -139,6 +140,7 @@ namespace ShopTechOnline.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
+            ViewBag.Role = new SelectList(db.Roles.ToList(), "Name", "Name");
             return View();
         }
 
@@ -155,8 +157,8 @@ namespace ShopTechOnline.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
-                    
+                    UserManager.AddToRole(user.Id, "Customer");
+                    //await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);

@@ -1,4 +1,5 @@
 ﻿using ShopTechOnline.Models;
+using ShopTechOnline.Models.EF;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,29 @@ namespace ShopTechOnline.Controllers
 {
     public class HomeController : Controller
     {
+        private ApplicationDbContext db = new ApplicationDbContext();
+
         public ActionResult Index()
         {
             return View();
+        }
+
+        public ActionResult Partial_Subcribe()
+        {
+            return PartialView();
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Subscribe(Subscribe req)
+        {
+            if (ModelState.IsValid)
+            {
+                db.subscribes.Add(new Subscribe { Email = req.Email, CreatedDate = DateTime.Now });
+                db.SaveChanges();
+                return Json(new { Success = true});
+            }
+            return View("Partial_Subcrib", req);
         }
 
         public ActionResult About()

@@ -9,13 +9,18 @@ namespace ShopTechOnline.Models.EF
 {
     [Table("Subscribe")]
 
-    public class Subscribe : CommonAbstract
+    public class Subscribe
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 
         public int ID { get; set; }
 
+        [EmailAddress]
+        [Required]
         public string Email { get; set; }
+
+        public DateTime CreatedDate { get; set; }
+
     }
 }
